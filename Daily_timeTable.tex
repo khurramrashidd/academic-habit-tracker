@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[a4paper,margin=1.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{helvet}
+\usepackage{fontawesome5}  % For icons
+\usepackage{tcolorbox}     % For colorful boxes
+\usepackage{colortbl}      % For table coloring
+\tcbuselibrary{skins}
+
+% --- Font Setup ---
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- Color Palette (Matching the Habit Tracker) ---
+\definecolor{primary}{HTML}{003366}       % Dark Navy
+\definecolor{secondary}{HTML}{4A90E2}     % Bright Blue
+\definecolor{accent}{HTML}{E67E22}        % Orange for highlights
+\definecolor{lightbg}{HTML}{F4F7F9}       % Very light gray-blue background
+\definecolor{textgray}{HTML}{444444}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{tcolorbox}[
+    colback=primary,
+    colframe=primary,
+    arc=0mm,
+    boxrule=0pt,
+    top=6mm, bottom=6mm,
+    width=\textwidth,
+    enhanced,
+    drop shadow
+]
+    \centering
+    {\Huge \textbf{\textcolor{white}{\faStopwatch\ \ Daily Discipline Schedule}}}\\
+    \vspace{8pt}
+    {\Large \textcolor{white}{Khurram Rashid}}\\
+    {\small \textcolor{white!80}{Founder \& CEO, Ibtidaa Tech}}\\
+    \vspace{6pt}
+    % Location and Wakeup Info
+    \fcolorbox{secondary}{white}{
+        \hspace{6pt}
+        \small \textcolor{primary}{\faMapMarker*} Panvel (Amity University Mumbai) 
+        \hspace{10pt} \textbar \hspace{10pt} 
+        \textbf{\faClock\ Wake-up: 6:00 AM}
+        \hspace{6pt}
+    }
+\end{tcolorbox}
+
+\vspace{10pt}
+
+% ================= MACROS FOR SECTIONS =================
+% A custom box for each time block
+\newtcolorbox{dayblock}[2]{
+    colback=white,
+    colframe=secondary!40!white, % Subtle border
+    coltitle=primary,
+    title={\large \textbf{#1} \hfill #2}, % Title + Icon
+    fonttitle=\bfseries,
+    colbacktitle=lightbg,
+    boxrule=1pt,
+    arc=4pt,
+    left=4pt, right=4pt, top=4pt, bottom=4pt,
+    enhanced
+}
+
+% A macro for a schedule row: Time | Activity
+\newcommand{\entry}[2]{
+    \textbf{\small \textcolor{secondary}{#1}} & \textcolor{textgray}{#2} \\
+}
+
+% ================= SCHEDULE CONTENT =================
+
+% --- Morning Routine ---
+\begin{dayblock}{Morning Routine}{\faSun[regular]}
+    \begin{tabular}{p{3.2cm} p{12cm}}
+        \entry{6:00 AM}{Wake up, drink water (No Phone \faMobile*)}
+        \entry{6:05 AM}{Wudu + \textbf{\textcolor{primary}{Fajr Namaz \faMosque}}}
+        \entry{6:15 -- 6:35 AM}{Light exercise / walk \faWalking}
+        \entry{6:35 -- 7:00 AM}{Freshen up}
+    \end{tabular}
+\end{dayblock}
+
+\vspace{6pt}
+
+% --- Deep Focus ---
+\begin{dayblock}{Deep Focus Block}{\faBrain}
+    \begin{tabular}{p{3.2cm} p{12cm}}
+        \entry{7:00 -- 8:30 AM}{Deep study (Pen + Paper, Active Learning) \faPenFancy}
+        \entry{8:30 -- 9:00 AM}{Breakfast \faMugHot}
+    \end{tabular}
+\end{dayblock}
+
+\vspace{6pt}
+
+% --- College & Daytime ---
+\begin{dayblock}{College \& Daytime}{\faUniversity}
+    \begin{tabular}{p{3.2cm} p{12cm}}
+        \entry{9:00 AM -- 1:15 PM}{Classes / Labs}
+        \entry{1:15 PM}{\textbf{\textcolor{primary}{Dhuhr Namaz \faMosque}}}
+        \entry{1:30 -- 4:00 PM}{Classes / Self-study block}
+    \end{tabular}
+\end{dayblock}
+
+\vspace{6pt}
+
+% --- Evening Reset ---
+\begin{dayblock}{Evening Reset}{\faCloudSun}
+    \begin{tabular}{p{3.2cm} p{12cm}}
+        \entry{4:45 PM}{\textbf{\textcolor{primary}{Asr Namaz \faMosque}}}
+        \entry{5:00 -- 6:15 PM}{Light study / Practice}
+        \entry{6:30 PM}{\textbf{\textcolor{primary}{Maghrib Namaz \faMosque}}}
+        \entry{6:45 -- 7:15 PM}{Exercise / Evening Walk \faRunning}
+    \end{tabular}
+\end{dayblock}
+
+\vspace{6pt}
+
+% --- Night Wind-Down ---
+\begin{dayblock}{Night Wind-Down}{\faMoon[regular]}
+    \begin{tabular}{p{3.2cm} p{12cm}}
+        \entry{7:30 -- 8:00 PM}{Dinner \faUtensils}
+        \entry{8:00 PM}{\textbf{\textcolor{primary}{Isha Namaz \faMosque}}}
+        \entry{8:15 -- 9:15 PM}{Light revision / Planning for tomorrow}
+        \entry{9:15 -- 10:30 PM}{Wind down (Low light, No reels \faBan)}
+        \entry{10:30 PM}{Sleep \faBed}
+    \end{tabular}
+\end{dayblock}
+
+\vfill
+
+% ================= FOOTER =================
+\begin{center}
+    \begin{tcolorbox}[
+        colback=primary!10!white,
+        colframe=primary,
+        width=0.9\textwidth,
+        arc=6pt,
+        boxrule=0.5pt
+    ]
+        \centering
+        \textcolor{primary}{\faQuoteLeft} \quad 
+        \textit{\textbf{\textcolor{primary}{Consistency builds discipline.}} Discipline builds freedom.} 
+        \quad \textcolor{primary}{\faQuoteRight}
+    \end{tcolorbox}
+\end{center}
+
+\end{document}

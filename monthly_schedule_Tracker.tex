@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[a4paper,margin=1cm,top=0.8cm,bottom=0.8cm]{geometry}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+\usepackage{fourier}
+\usepackage{booktabs}
+
+% --- Font ---
+\renewcommand{\familydefault}{\rmdefault}
+
+% --- Colors ---
+\definecolor{academicblue}{HTML}{1A237E}
+\definecolor{academicred}{HTML}{B71C1C}
+\definecolor{tablehead}{HTML}{E8EAF6}
+\definecolor{tablerow}{HTML}{F5F5F5}
+
+% --- Layout ---
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+    {\fontsize{20}{24}\selectfont \textbf{\textcolor{academicblue}{Academic Habit Tracker}}} \\
+    \vspace{2pt}
+    {\large \textcolor{academicred}{Khurram Rashid}} \\
+    {\small \textit{Founder \& CEO, Ibtidaa Tech}} \\
+    \vspace{3pt}
+    \textcolor{academicblue}{\rule{0.9\textwidth}{0.8pt}} \\
+    \vspace{3pt}
+    {\large \textcolor{academicblue}{\faCalendar\ Month: \underline{\hspace{2.8cm}} \hspace{0.6cm} Year: 20\underline{\hspace{1.8cm}}}} \\
+    \vspace{6pt}
+\end{center}
+
+% ================= WEEK TABLE COMMAND =================
+\newcommand{\weektable}[1]{%
+\noindent
+\begin{tabular*}{\textwidth}{|p{6.2cm}|@{\extracolsep{\fill}}c|c|c|c|c|c|c|}
+\hline
+\rowcolor{tablehead}
+\textbf{\textcolor{academicblue}{#1}} &
+\textbf{\textcolor{academicblue}{M}} &
+\textbf{\textcolor{academicblue}{T}} &
+\textbf{\textcolor{academicblue}{W}} &
+\textbf{\textcolor{academicblue}{T}} &
+\textbf{\textcolor{academicblue}{F}} &
+\textbf{\textcolor{academicblue}{S}} &
+\textbf{\textcolor{academicblue}{S}} \\
+\hline
+\rowcolor{white}
+\faBook\ Study (6--8 AM) & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\rowcolor{tablerow}
+\faGraduationCap\ Research work & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\rowcolor{white}
+\faMosque\ Fajr on time & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\rowcolor{tablerow}
+\faPray\ All five Salah & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\rowcolor{white}
+\faDumbbell\ Exercise & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\rowcolor{tablerow}
+\faSun\ Wake at 6:00 AM & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\rowcolor{white}
+\faMobile*\ No phone in bed & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\end{tabular*}
+}
+
+% ================= FOUR WEEKS (WITH GAPS) =================
+\weektable{Week 1}
+
+\vspace{10pt}
+
+\weektable{Week 2}
+
+\vspace{10pt}
+
+\weektable{Week 3}
+
+\vspace{10pt}
+
+\weektable{Week 4}
+
+\vspace{4pt}
+
+% ================= FOOTER =================
+\begin{center}
+    \textcolor{academicblue}{\rule{0.95\textwidth}{0.5pt}} \\
+    \vspace{4pt}
+    \begin{minipage}{0.95\textwidth}
+        \centering\small
+        \textcolor{academicred}{\faQuoteLeft}\ 
+        \textit{\textcolor{academicblue}{Consistency over intensity. One honest month can change everything.}}
+        \ \textcolor{academicred}{\faQuoteRight}
+    \end{minipage}
+\end{center}
+
+\end{document}
