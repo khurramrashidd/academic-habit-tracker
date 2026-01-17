@@ -21,6 +21,6 @@ Print-friendly design
 
 Suitable for daily manual tracking
 
-Author
-Khurram Rashid
-Founder & CEO, Ibtidaa Tech
+## Author
+- Khurram Rashid
+
