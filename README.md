@@ -2,7 +2,7 @@
    
 A clean, print-friendly LaTeX project for personal productivity.
 
-## Files
+## Files 
 - `monthly_schedule_Tracker.tex`  
   One-page monthly habit tracker (4 weeks per page)
 
@@ -22,5 +22,5 @@ Print-friendly design
 Suitable for daily manual tracking
 
 ## Author
-- Khurram Rashid
+- Khurram Rashid 
 
